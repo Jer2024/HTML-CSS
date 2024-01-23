@@ -1,0 +1,55 @@
+<meta name="viewport" content="width=device-width , initial-scale=1.0">
+<style>
+.green{
+    background-color: greenyellow;
+    display:flex;
+    height:100px;
+    margin:5px;
+}
+.container{
+    height:200px;
+    display:flex;
+    justify-content: space-between;
+    margin: 5px;
+    flex-wrap: wrap;
+    
+}
+.blue{
+    background-color: rgb(21, 184, 212);
+    height:100px;
+    flex-basis: 30%;
+    margin:5px;
+    flex-grow:1;
+
+}
+.grey{
+    background-color: rgb(191, 211, 214);
+    height:100px;
+    flex-basis: 20%;
+    margin:5px;
+    flex-grow:1;
+}
+@media screen and (max-width:600px){
+    .blue{
+        flex-basis:100%;
+    }
+    .grey{
+        flex-basis: 40%;
+    }
+}
+@media screen and (max-width:300px){
+    
+    .grey{
+        flex-basis: 80%;
+    }
+}
+
+</style>
+<div class="green"></div>
+<div class="container">
+<div class="blue"></div>
+<div class="blue"></div><div class="blue"></div>
+    <div class="grey"></div>
+    <div class="grey"></div>
+    <div class="grey"></div>
+    <div class="grey"></div></div>
