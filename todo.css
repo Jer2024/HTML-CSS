@@ -1,0 +1,67 @@
+body {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight:300;
+  font-style: normal;
+}
+#input{
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight:800;
+    font-style: normal;
+    width:75%;
+    text-align: center;
+    border-radius: 20px;
+    border-style: outset;
+    border-color:rgb(105, 171, 224);
+    height:30px;
+    margin:20px;
+
+}
+#task{
+    background-color:rgb(105, 171, 224);
+    border-radius: 20px;
+    display:block;
+    min-height:400px;
+}
+#add{
+    background-color: rgb(105, 171, 224);
+    border-radius: 10px;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight:800;
+    font-style: normal;
+    height:30px;
+}
+#add:hover{
+    border-color: rgb(105, 171, 224);
+    background-color: aliceblue;
+    border-radius: 10px;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight:800;
+    font-style: normal;
+    height:30px;
+    cursor:pointer;
+}
+#del{
+    background-color:red;
+    border-radius: 10px;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight:800;
+    font-style: normal;
+    height:30px;
+    margin:20px;
+}
+#del:hover{
+    border-color:red;
+    background-color: aliceblue;
+    border-radius: 10px;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight:800;
+    font-style: normal;
+    height:30px;
+    cursor:pointer;
+}

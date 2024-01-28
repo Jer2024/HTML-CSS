@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDO list</title>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&family=Roboto+Slab:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <center>
+        <h1>Customize Your ToDO List</h1>
+        <input id="input" placeholder="Enter Your Task"><button onclick="add()" id="add">Add To Your Task</button>
+        <div id="task">
+            <h2>Your Tasks</h2>
+        </div>
+    </center>    
+</body>
+</html>
+<script>
+    var In=document.getElementById("input")
+    var a=document.getElementById("task")
+    function add(){
+        var b=document.createElement("h3")
+        b.innerHTML=In.value+"<button id='del' onclick='del(event)'>Delete</button>"
+        a.append(b)
+        In.value=""
+
+    }
+    function del(){
+        event.target.parentNode.remove()
+    }
+</script>
