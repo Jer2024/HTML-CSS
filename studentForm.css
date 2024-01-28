@@ -1,0 +1,40 @@
+
+
+body {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.container{
+    display:table;
+    border-style:groove;
+    padding:20px;
+    margin:20px;
+    border-radius: 20px;
+}
+#save{
+    width:100px;
+    background-color: aqua;
+}
+.element{
+    display:inline-block;
+    border-style:inset;
+    padding:5px;
+    min-width:200px;
+    border-radius: 10px;
+}
+.input{
+    display:block;
+    border-style:inset;
+    padding:5px;
+    min-width:100px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+.delete{
+    background-color: red;
+}
+

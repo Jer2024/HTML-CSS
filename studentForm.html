@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student form</title>
+    <link rel="stylesheet" href="studentForm.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <center>
+        <h1>STUDENT FORM</h1>
+        <div class="container">
+        <table>
+            <tr>
+                <td><div class="input">Name</div></td><td><div class="element"><input class="info" placeholder="Enter Your Name" ></div></td>
+            </tr>
+            <tr>
+                <td><div class="input">Age</div></td><td><div class="element"><input class="info" placeholder="Enter Your Age" ></div></td>
+            </tr>
+            <tr>
+                <td><div class="input">Gender</div></td><td><div class="element"><input class="radio" value="Male" type="radio" name="gender">Male <input class="radio" value="Female" type="radio" name="gender">Female</div></td>
+            </tr>
+            <tr>
+                <td><div class="input">Course</div></td><td><div class="element"><select class="info">
+                    <option>Python programming</option>
+                    <option>JavaScript</option>
+                    <option>C-programming</option>
+                    <option>Java</option>
+                </select></div></td>
+            </tr>
+            <tr>
+                <td><div class="input">E-mail</div></td><td><div class="element"><input class="info" placeholder="Enter Your E-mail"></div></td>
+            </tr>
+        </table>
+        <div class="input"><button onclick="save(); clearinput(); clearInput()" id="save">SAVE</button></div>
+    </div>
+    <div class="container" >
+        <table id="data">
+            <tr>
+                <td><div class="input">Name</div></td><td><div class="input">Age</div></td><td><div class="input">Course</div></td><td><div class="input">Gender</div></td><td><div class="input">Email</div></td><td><div class="input">Action</div></td>
+            </tr>
+        </table>
+    </div>
+    </center>
+    
+</body>
+</html>
+<script>
+    var info = document.querySelectorAll(".info");
+    var genderInfo = document.getElementsByName("gender");
+    function deleteRow(event){
+        event.target.parentNode.parentNode.parentNode.remove()
+
+} 
+function clearinput(){
+        for(i=0;i<info.length;i++){
+            if(i!=2){
+                info[i].value=""
+            }
+            
+        }
+    }
+    function clearInput() {
+    for (var i = 0; i < genderInfo.length; i++) {
+        genderInfo[i].checked = false; // Uncheck radio buttons
+    }
+}
+
+   function save(){
+    var info = document.querySelectorAll(".info");
+    var genderInfo = document.getElementsByName("gender");
+    var data=document.getElementById("data")
+    var studentinfo=document.createElement("tr")
+    
+
+// Loop through the radio buttons to find the selected one
+function gender(){
+    for (var i = 0; i < genderInfo.length; i++) {
+    if (genderInfo[i].checked) {
+        selectedvalue= genderInfo[i].value;
+        break; // Exit loop once a selected gender is found
+    }
+}
+return selectedvalue;
+
+}
+console.log(info);
+
+// Loop through the elements with class "info"
+for (var count = 0; count < info.length; count++) {
+    console.log(info[count].value);
+}
+studentinfo.innerHTML="<td><div class='input'>"+info[0].value+"</div></td><td><div class='input'>"+info[1].value+"</div></td><td><div class='input'>"+info[2].value+"</div></td><td><div class='input'>"+gender()+"</div></td><td><div class='input'>"+info[3].value+"</div></td><td><div class='input'><button onclick='deleteRow(event)' class='delete'>DELETE</button></div></td>"
+console.log(studentinfo)
+data.append(studentinfo)
+   }
+
+</script>
