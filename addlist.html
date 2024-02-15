@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addlist</title>
+    <link rel="stylesheet" href="addlist.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poor+Story&family=Roboto+Slab:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="topic">
+        <h1>SKY MUSIC</h1>
+    </div>
+    <div class="container">
+        <div class="music-list">
+            <h3>Ebinesare</h3>
+            <h5>John Jebaraj</h5>
+            <p>The song really very soulful its lyrics are heart touching.</p>
+            <button id="del" onclick="del(event)">Delete</button>
+        </div>
+
+    </div>
+    <div class="overlay">
+    </div>
+    <div class="popup">
+        <h2>Add Song</h2>
+    
+        <input class="input" placeholder="Enter Song Name">
+        <input class="input" placeholder="Enter Composer Name">
+        <textarea class="input" placeholder="Describe"></textarea>
+       <center>
+        <button id="addsong">OK</button><button id="cancel">CANCEL</button>
+    </center>
+    </div>
+    <button id="add">+</button>
+
+
+    <script src="addlist.js"></script>
+</body>
+</html>
